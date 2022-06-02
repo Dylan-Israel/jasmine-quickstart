@@ -13,6 +13,40 @@
             return !bool;
         }
 
+        function getSum(x,y) {
+            return x + y;
+        }
+
+
+        describe("A suite is just a function", function() {
+        var a;
+
+        it("and so is a spec", function() {
+            a = true;
+
+            expect(a).toBe(true);
+        });
+        });
+
+
+        describe("A suite", function() {
+        it("contains spec with an expectation", function() {
+            expect(true).toBe(true);
+        });
+        });
+
+        describe('Addition' , () => {
+            it('get the total of two numbers', () => {
+                const num1 = 5;
+                const num2 = 5;
+
+                const total = getSum(num1,num2);
+
+                //expect
+                expect(total).toBe(10);
+            })
+        })
+
         describe('Write Your Test Group Descriptions Here', () => {
             it('Write Your Test Expectation Here', () => {
                 // arrange
